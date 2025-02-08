@@ -1,0 +1,32 @@
+---
+title: "Assignment 1"
+author: "Lanie Louque"
+date: "2025-02-04"
+output:
+  word_document: default
+---
+
+# Question 1
+```{r echo = TRUE}
+## retrieve numbers and insert into R as vector
+## x <- c(x, x, x, x, x, x)
+## stem(x)
+stemAndLeaf <- c(31, 35, 36, 36, 37, 38, 40, 40, 40, 41, 41, 42, 42, 42, 42, 42, 43, 44, 45, 46, 46, 47, 48, 48, 48, 51, 54, 54, 55, 58, 62, 66, 66, 67, 68, 75)
+fivenum(stemAndLeaf)
+```
+
+# Question 3
+1.
+```{r echo = TRUE}
+defectiveBatches = 19 + 12 + 14 + 6 + 3
+defectiveBatches/60
+```
+
+2.
+```{r echo = TRUE}
+## load the dataset from csv file using read.csv
+## dat <- read.csv(file = "xxxx")
+Transducers <- read.csv("Transducers.csv")
+h <- hist(Transducers$X2, main = "Transducers Histogram", xlab = "", ylab = "Density")
+text(h$mids, h$counts, labels=h$counts)
+```
